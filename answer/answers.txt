@@ -1,0 +1,10 @@
+Down
+Right
+Enter
+Down
+Left
+Enter
+Right
+Enter
+Down
+Enter

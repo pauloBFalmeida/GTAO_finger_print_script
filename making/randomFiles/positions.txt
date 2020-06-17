@@ -1,0 +1,12 @@
+0.245 0.255
+0.25 0.65
+
+; digitais
+; MouseMove Width * 0.2, Height * 0.2
+; Sleep, 1000
+; MouseMove Width * 0.4, Height * 0.8
+
+; dedo
+; MouseMove Width * 0.45, Height * 0.1
+; Sleep, 1000
+; MouseMove Width * 0.7, Height * 0.7
