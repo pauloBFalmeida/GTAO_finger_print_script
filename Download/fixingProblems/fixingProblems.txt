@@ -1,0 +1,11 @@
+Try following the testing.txt first
+
+--------------------------------------------------
+If that doesn't work maybe your problem is with the ahk (autohotkeys)
+so search in some ahk forum for the problem
+
+the original code is on my other repository
+https://github.com/pauloBFalmeida/GTAO_finger_print_script
+
+it might help
+

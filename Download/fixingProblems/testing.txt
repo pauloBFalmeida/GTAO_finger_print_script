@@ -1,0 +1,114 @@
+Stop the script (shift + esc, or on the toolbar, or if it isn't open then just proceed)
+
+Open the 'settings.ini' inside the 'answer' folder
+
+Then change this lines:
+showContours = False	to 	showContours = True
+showDots = False	to 	showDots = True
+
+Save the settings.ini file
+
+After that run the script 'doorHackTest.exe'
+(this one isn't going to press any keys, just take the screenshot and analize)
+
+Open the 'screenshots' folder and put one of the images in fullscreen
+Then execute keys in the script (shift+F1 or shift+F2)
+Now some images are going to apear
+Check to see if they are similar with the other ones inside 'outputs' folder
+(in Contours, all the boxes should have that tick gray outline)
+
+If they are, you are fine and the script should run just fine
+
+If any of them aren't then open the 'settings.ini'
+And for each one that doesn't match follow the instructions
+
+--------------------------------------------------------------
+Contours:
+
+-Not all/None boxes are appearing:
+Try changing these float values inside 0.0 to 1.0:
+
+parts_str_h = 0.2
+parts_end_h = 0.8
+parts_str_w = 0.2
+parts_end_w = 0.45
+
+the _h stands for height, and the _w for width
+while _str stands for start, and end to the end
+this delimits the area of the screen that is cropped
+
+-The gray contours are not matching, or missing:
+try changing this integer between 0 to 255
+
+threshold = 33
+
+maybe the image is in a weird size or deformed so try changing
+it resizes the whole screenshot size
+
+resize_size = 1000,600
+
+-The gray contours are fine but it still doesn't work:
+try changing this integer between -25 to 25 
+(the number could possible be biger than 25 or smaller then -25, but it's unlikely)
+
+margin = 5
+
+maybe the image is in a weird size or deformed so try changing
+it resizes the whole screenshot size
+
+resize_size = 1000,600
+
+--------------------------------------------------------------
+dots:
+
+-Not all/None dots are appearing:
+Try changing these float values inside 0.0 to 1.0:
+
+str_h = 0.25
+end_h = 0.78
+str_w = 0.2
+end_w = 0.6
+
+the _h stands for height, and the _w for width
+while _str stands for start, and end to the end
+this delimits the area of the screen that is cropped
+
+or try changing this integer between 0 to 255
+
+threshold = 120
+
+maybe the image is in a weird size or deformed so try changing
+it resizes the whole screenshot size
+
+resize_size = 1000,600
+
+-The dots are fine but it still doesn't work:
+try changing this integer between 0 and 120 
+(the number could possible be biger, but it's unlikely)
+
+circle_size = 60
+
+it uses this circle size to find the line and column of each dot
+
+try changing this integer between 0 and 100
+(the number could possible be biger, but it's unlikely)
+
+str_x = 50
+str_y = 40
+
+it uses this as the top left circle (it might not be lit up, but it isn't a problem)
+
+maybe the image is in a weird size or deformed so try changing
+it resizes the whole screenshot size
+
+resize_size = 1000,600
+
+maybe the time between each screenshot isn't wright
+try changing this float between 0.01 to 1.0:
+(closest to 0 more screenshots per second, if its 1.0 it will take 1 shot per second)
+
+sleep_time = 0.2
+
+--------------------------------------------------------------
+If none of this helps maybe this script isn't going to work for you
+:(
